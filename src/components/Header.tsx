@@ -14,7 +14,9 @@ export default function Header() {
       <nav className="bg-red-900 py-4 px-8">
         <div className="flex items-center justify-between container">
           <div className="flex items-center font-bold">
-            <Link href={'/'}>Clerk App</Link>
+            <Link href="/">
+              <div className="text-lg text-white">Clerk App</div>
+            </Link>
           </div>
 
           <div className="flex items-center font-bold">
@@ -22,26 +24,36 @@ export default function Header() {
               <div className="text-gray-300 hover:text-white mr-4">
                 <SignInButton />
               </div>
+
               <div className="text-gray-300 hover:text-white mr-4">
                 <SignUpButton />
               </div>
             </SignedOut>
             <SignedIn>
               <Link
+                href="/repos"
+                className="text-gray-300 hover:text-white mr-4"
+              >
+                Repos
+              </Link>
+              <Link
                 href="/dashboard"
                 className="text-gray-300 hover:text-white mr-4"
               >
-                Dashboard-Server
+                Dashboard-S
               </Link>
+
               <Link
-                href="/client-dashboard"
+                href="/dashboard-c"
                 className="text-gray-300 hover:text-white mr-4"
               >
-                Dashboard-Client
+                Dashboard-C
               </Link>
+
               <div className="text-gray-300 hover:text-white mr-4">
                 <UserButton />
               </div>
+
               <div className="text-gray-300 hover:text-white mr-4">
                 <SignOutButton />
               </div>
